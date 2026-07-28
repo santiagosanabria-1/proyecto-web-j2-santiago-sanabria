@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contacto Nexus Tech — Formulario, mapa y redes sociales.">
+  <meta name="description" content="Contacto Nexus Tech — Escríbenos, encuentra nuestras oficinas o síguenos en redes sociales.">
+  <meta name="theme-color" content="#0A0A0A">
   <title>Contacto | Nexus Tech</title>
   <link rel="stylesheet" href="../activos/css/main.css">
   <link rel="stylesheet" href="../activos/css/layout.css">
@@ -39,7 +40,128 @@
 
   <main>
 
+    <section class="section" style="padding-top: calc(68px + var(--spacing-2xl));">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__label">Contacto</span>
+          <h1 class="section__title">Hablemos</h1>
+          <p class="section__subtitle">Estamos aquí para ayudarte. Responde en menos de 24 horas.</p>
+        </header>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-2xl);align-items:start;max-width:960px;margin:0 auto">
+
+          <form class="form">
+            <div class="form__row">
+              <div class="form__group">
+                <label for="nombre" class="form__label">Nombre</label>
+                <input type="text" id="nombre" class="form__input" placeholder="Tu nombre" required>
+              </div>
+              <div class="form__group">
+                <label for="email" class="form__label">Correo</label>
+                <input type="email" id="email" class="form__input" placeholder="correo@ejemplo.com" required>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="asunto" class="form__label">Asunto</label>
+              <select id="asunto" class="form__select">
+                <option value="">Selecciona un asunto</option>
+                <option value="colaboracion">Colaboración</option>
+                <option value="prensa">Prensa</option>
+                <option value="soporte">Soporte</option>
+                <option value="eventos">Eventos</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label for="mensaje" class="form__label">Mensaje</label>
+              <textarea id="mensaje" class="form__textarea" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+          </form>
+
+          <div style="display:flex;flex-direction:column;gap:var(--spacing-xl)">
+
+            <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-lg)">
+              <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--color-white);margin-bottom:var(--spacing-md)">Información</h3>
+              <dl style="display:flex;flex-direction:column;gap:var(--spacing-md)">
+                <div><dt style="font-size:0.72rem;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:var(--spacing-xs)">Email</dt><dd style="font-size:0.85rem;color:var(--color-light-gray);margin:0"><a href="mailto:hola@nexustech.com" style="color:var(--color-accent)">hola@nexustech.com</a></dd></div>
+                <div><dt style="font-size:0.72rem;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:var(--spacing-xs)">Ubicación</dt><dd style="font-size:0.85rem;color:var(--color-light-gray);margin:0">Av. Tecnológica 2049, Ciudad</dd></div>
+                <div><dt style="font-size:0.72rem;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:var(--spacing-xs)">Horario</dt><dd style="font-size:0.85rem;color:var(--color-light-gray);margin:0">Lun – Vie, 9:00 – 18:00</dd></div>
+              </dl>
+            </div>
+
+            <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-lg)">
+              <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--color-white);margin-bottom:var(--spacing-md)">Redes</h3>
+              <div style="display:flex;gap:var(--spacing-md)">
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer" style="width:40px;height:40px;border:1px solid var(--color-border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--color-gray);transition:all var(--transition-fast);text-decoration:none">𝕏</a>
+                <a href="#" style="width:40px;height:40px;border:1px solid var(--color-border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--color-gray);transition:all var(--transition-fast);text-decoration:none">◆</a>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" style="width:40px;height:40px;border:1px solid var(--color-border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--color-gray);transition:all var(--transition-fast);text-decoration:none">⌘</a>
+                <a href="#" style="width:40px;height:40px;border:1px solid var(--color-border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--color-gray);transition:all var(--transition-fast);text-decoration:none">▶</a>
+              </div>
+            </div>
+
+            <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--spacing-lg)">
+              <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--color-white);margin-bottom:var(--spacing-md)">Mapa</h3>
+              <div style="background:var(--color-surface-light);border-radius:var(--radius-sm);height:180px;display:flex;align-items:center;justify-content:center;font-size:0.82rem;color:var(--color-text-muted)">Mapa interactivo</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-footer">
+        <div class="footer__brand">
+          <div class="footer__logo">NEXUS<span>TECH</span></div>
+          <p class="footer__desc">Tu revista digital de tecnología y gaming. Análisis profundos, reseñas honestas y una comunidad apasionada.</p>
+          <div class="footer__social">
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social-link" aria-label="Discord">◆</a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">⌘</a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Navegación</h4>
+          <ul class="footer__list">
+            <li><a href="../index.html" class="footer__link">Inicio</a></li>
+            <li><a href="categorías.html" class="footer__link">Categorías</a></li>
+            <li><a href="resenas.html" class="footer__link">Reseñas</a></li>
+            <li><a href="comunidad.html" class="footer__link">Comunidad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Recursos</h4>
+          <ul class="footer__list">
+            <li><a href="eventos.html" class="footer__link">Eventos</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+            <li><a href="#" class="footer__link">Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contacto</h4>
+          <ul class="footer__list">
+            <li><a href="mailto:hola@nexustech.com" class="footer__link">hola@nexustech.com</a></li>
+            <li><a href="press@nexustech.com" class="footer__link">press@nexustech.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2026 Nexus Tech. Todos los derechos reservados.</span>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Privacidad</a>
+          <a href="#" class="footer__legal-link">Cookies</a>
+          <a href="#" class="footer__legal-link">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
