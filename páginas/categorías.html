@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Categorías de Nexus Tech — Explora artículos por tema, fecha y tendencias tecnológicas.">
+  <meta name="theme-color" content="#0A0A0A">
   <title>Categorías | Nexus Tech</title>
   <link rel="stylesheet" href="../activos/css/main.css">
   <link rel="stylesheet" href="../activos/css/layout.css">
@@ -39,7 +40,377 @@
 
   <main>
 
+    <section class="section" style="padding-top: calc(68px + var(--spacing-2xl));">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__label">Explorar</span>
+          <h1 class="section__title">Todas las <span class="gradient-text">categorías</span></h1>
+          <p class="section__subtitle">Navega por nuestra biblioteca de artículos organizados por tema, fecha y relevancia.</p>
+        </header>
+
+        <div class="grid-categories">
+
+          <aside class="sidebar">
+            <div class="sidebar__section">
+              <h2 class="sidebar__title">Buscar</h2>
+              <div class="sidebar__search-wrap">
+                <input type="search" class="sidebar__search" placeholder="Buscar artículos tecnológicos…" aria-label="Buscar artículos" id="searchInput">
+                <span class="sidebar__search-icon">🔍</span>
+              </div>
+            </div>
+            <div class="sidebar__section">
+              <h2 class="sidebar__title">Categorías</h2>
+              <div class="sidebar__filter-list" role="group" aria-label="Filtrar por categoría">
+                <button class="sidebar__filter sidebar__filter--active" data-category="all">Todas <span class="sidebar__filter-count">15</span></button>
+                <button class="sidebar__filter" data-category="ia">Inteligencia Artificial <span class="sidebar__filter-count">2</span></button>
+                <button class="sidebar__filter" data-category="gadgets">Gadgets <span class="sidebar__filter-count">5</span></button>
+                <button class="sidebar__filter" data-category="ciberseguridad">Ciberseguridad <span class="sidebar__filter-count">3</span></button>
+                <button class="sidebar__filter" data-category="desarrollo">Desarrollo de Software <span class="sidebar__filter-count">2</span></button>
+                <button class="sidebar__filter" data-category="tendencias">Tendencias <span class="sidebar__filter-count">3</span></button>
+              </div>
+            </div>
+            <div class="sidebar__section">
+              <h2 class="sidebar__title">Filtrar por fecha</h2>
+              <div class="sidebar__filter-list" role="group" aria-label="Filtrar por fecha">
+                <button class="sidebar__filter sidebar__filter--active" data-date="all">Todas las fechas <span class="sidebar__filter-count">15</span></button>
+                <button class="sidebar__filter" data-date="7d">Últimos 7 días <span class="sidebar__filter-count">3</span></button>
+                <button class="sidebar__filter" data-date="30d">Últimos 30 días <span class="sidebar__filter-count">7</span></button>
+                <button class="sidebar__filter" data-date="older">Más antiguos <span class="sidebar__filter-count">5</span></button>
+              </div>
+            </div>
+          </aside>
+
+          <div>
+
+            <section id="todas">
+              <div class="grid-articles">
+
+                <article class="article-card" data-category="ia" data-date="2026-07-15" data-author="Ana Torres" data-title="GPT-5: El salto cuántico en IA" data-description="Análisis del nuevo modelo de OpenAI y su impacto en la productividad global.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/ia-laboratorio.jpeg" alt="Investigadores en laboratorio de inteligencia artificial" class="article-card__image">
+                    <span class="article-card__category">IA</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">A</span> Ana Torres</span>
+                      <span class="article-card__date">15 Jul 2026</span>
+                      <span class="article-card__reading-time">5 min</span>
+                    </div>
+                    <h3 class="article-card__title">GPT-5: El salto cuántico en IA</h3>
+                    <p class="article-card__text">Análisis del nuevo modelo de OpenAI y su impacto en la productividad global.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="gadgets" data-date="2026-07-14" data-author="Miguel Rivas" data-title="iPhone 17 Pro vs Galaxy S26" data-description="Comparativa completa de los dos smartphones más potentes del mercado.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/reseñas/smartphone-review.jpeg" alt="Smartphone sobre superficie iluminada en estudio" class="article-card__image">
+                    <span class="article-card__category">Gadgets</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">M</span> Miguel Rivas</span>
+                      <span class="article-card__date">14 Jul 2026</span>
+                      <span class="article-card__reading-time">4 min</span>
+                    </div>
+                    <h3 class="article-card__title">iPhone 17 Pro vs Galaxy S26</h3>
+                    <p class="article-card__text">Comparativa completa de los dos smartphones más potentes del mercado.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="ciberseguridad" data-date="2026-07-13" data-author="David Kim" data-title="Zero Trust para empresas" data-description="Guía para implementar seguridad Zero Trust en tu organización.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/ciberseguridad-centro.jpeg" alt="Operadores en centro de control de ciberseguridad" class="article-card__image">
+                    <span class="article-card__category">Ciberseguridad</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">D</span> David Kim</span>
+                      <span class="article-card__date">13 Jul 2026</span>
+                      <span class="article-card__reading-time">6 min</span>
+                    </div>
+                    <h3 class="article-card__title">Zero Trust para empresas</h3>
+                    <p class="article-card__text">Guía para implementar seguridad Zero Trust en tu organización.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="desarrollo" data-date="2026-07-12" data-author="Laura Chen" data-title="Rust vs Go en 2026" data-description="¿Cuál lenguaje elegir para tu próximo proyecto backend? Análisis técnico.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/desarrollo-software.jpeg" alt="Ingenieros de software colaborando en código" class="article-card__image">
+                    <span class="article-card__category">Desarrollo</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">L</span> Laura Chen</span>
+                      <span class="article-card__date">12 Jul 2026</span>
+                      <span class="article-card__reading-time">4 min</span>
+                    </div>
+                    <h3 class="article-card__title">Rust vs Go en 2026</h3>
+                    <p class="article-card__text">¿Cuál lenguaje elegir para tu próximo proyecto backend? Análisis técnico.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="gadgets" data-date="2026-07-11" data-author="Jorge Martí" data-title="PS6: Todo lo que sabemos" data-description="Especificaciones, precio estimado y títulos de lanzamiento filtrados.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/gaming-consola.jpeg" alt="Consola de videojuegos en estudio fotográfico" class="article-card__image">
+                    <span class="article-card__category">Gaming</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">J</span> Jorge Martí</span>
+                      <span class="article-card__date">11 Jul 2026</span>
+                      <span class="article-card__reading-time">3 min</span>
+                    </div>
+                    <h3 class="article-card__title">PS6: Todo lo que sabemos</h3>
+                    <p class="article-card__text">Especificaciones, precio estimado y títulos de lanzamiento filtrados.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="gadgets" data-date="2026-07-10" data-author="Sara López" data-title="Watch Ultra 4 vs Watch 8" data-description="Comparativa de salud, sensores y autonomía de los smartwatches top.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/reseñas/smartwatch-review.jpeg" alt="Smartwatch con banda elegante sobre superficie oscura" class="article-card__image">
+                    <span class="article-card__category">Wearables</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">S</span> Sara López</span>
+                      <span class="article-card__date">10 Jul 2026</span>
+                      <span class="article-card__reading-time">4 min</span>
+                    </div>
+                    <h3 class="article-card__title">Watch Ultra 4 vs Watch 8</h3>
+                    <p class="article-card__text">Comparativa de salud, sensores y autonomía de los smartwatches top.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="tendencias" data-date="2026-07-09" data-author="Ana Torres" data-title="Computación cuántica práctica" data-description="Cómo la tecnología cuántica está llegando a aplicaciones comerciales reales.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/computacion-cuantica.jpeg" alt="Hardware de computación cuántica en laboratorio" class="article-card__image">
+                    <span class="article-card__category">Tendencias</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">A</span> Ana Torres</span>
+                      <span class="article-card__date">9 Jul 2026</span>
+                      <span class="article-card__reading-time">5 min</span>
+                    </div>
+                    <h3 class="article-card__title">Computación cuántica práctica</h3>
+                    <p class="article-card__text">Cómo la tecnología cuántica está llegando a aplicaciones comerciales reales.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="tendencias" data-date="2026-07-08" data-author="Miguel Rivas" data-title="Hogar inteligente 2026" data-description="Los mejores dispositivos para automatizar tu hogar este año.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/hardware-general.jpeg" alt="Dispositivos tecnológicos en entorno oscuro" class="article-card__image">
+                    <span class="article-card__category">Smart Home</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">M</span> Miguel Rivas</span>
+                      <span class="article-card__date">8 Jul 2026</span>
+                      <span class="article-card__reading-time">4 min</span>
+                    </div>
+                    <h3 class="article-card__title">Hogar inteligente 2026</h3>
+                    <p class="article-card__text">Los mejores dispositivos para automatizar tu hogar este año.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="tendencias" data-date="2026-07-07" data-author="David Kim" data-title="Coches autónomos: el estado real" data-description="¿Dónde estamos realmente con la conducción autónoma? Datos y perspectivas.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/vehiculos-autonomos.jpeg" alt="Vehículo autónomo de lujo en carretera" class="article-card__image">
+                    <span class="article-card__category">Tendencias</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">D</span> David Kim</span>
+                      <span class="article-card__date">7 Jul 2026</span>
+                      <span class="article-card__reading-time">6 min</span>
+                    </div>
+                    <h3 class="article-card__title">Coches autónomos: el estado real</h3>
+                    <p class="article-card__text">¿Dónde estamos realmente con la conducción autónoma? Datos y perspectivas.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="gadgets" data-date="2026-07-06" data-author="Laura Chen" data-title="Realidad mixta en 2026" data-description="Apple Vision Pro 2 vs Meta Quest 4: la nueva generación de MR.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/realidad-virtual.jpeg" alt="Desarrollador utilizando gafas de realidad virtual" class="article-card__image">
+                    <span class="article-card__category">Gadgets</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">L</span> Laura Chen</span>
+                      <span class="article-card__date">6 Jul 2026</span>
+                      <span class="article-card__reading-time">3 min</span>
+                    </div>
+                    <h3 class="article-card__title">Realidad mixta en 2026</h3>
+                    <p class="article-card__text">Apple Vision Pro 2 vs Meta Quest 4: la nueva generación de MR.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="ciberseguridad" data-date="2026-07-05" data-author="Sara López" data-title="Ataques deepfake: cómo defenderte" data-description="Herramientas y estrategias para identificar y protegerte de deepfakes.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/ciberseguridad-centro.jpeg" alt="Centro de monitoreo de ciberseguridad con pantallas" class="article-card__image">
+                    <span class="article-card__category">Ciberseguridad</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">S</span> Sara López</span>
+                      <span class="article-card__date">5 Jul 2026</span>
+                      <span class="article-card__reading-time">5 min</span>
+                    </div>
+                    <h3 class="article-card__title">Ataques deepfake: cómo defenderte</h3>
+                    <p class="article-card__text">Herramientas y estrategias para identificar y protegerte de deepfakes.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="ia" data-date="2026-07-04" data-author="Jorge Martí" data-title="IA generativa en el trabajo" data-description="Cómo los equipos están usando IA para multiplicar su productividad.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/ia-generativa.jpeg" alt="Representación de inteligencia artificial generativa en estudio" class="article-card__image">
+                    <span class="article-card__category">IA</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">J</span> Jorge Martí</span>
+                      <span class="article-card__date">4 Jul 2026</span>
+                      <span class="article-card__reading-time">4 min</span>
+                    </div>
+                    <h3 class="article-card__title">IA generativa en el trabajo</h3>
+                    <p class="article-card__text">Cómo los equipos están usando IA para multiplicar su productividad.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="ciberseguridad" data-date="2026-07-03" data-author="Ana Torres" data-title="Passkeys: el fin de las contraseñas" data-description="Todo lo que necesitas saber sobre la autenticación sin contraseñas.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/semiconductor.jpeg" alt="Chip semiconductor en placa de circuito" class="article-card__image">
+                    <span class="article-card__category">Ciberseguridad</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">A</span> Ana Torres</span>
+                      <span class="article-card__date">3 Jul 2026</span>
+                      <span class="article-card__reading-time">7 min</span>
+                    </div>
+                    <h3 class="article-card__title">Passkeys: el fin de las contraseñas</h3>
+                    <p class="article-card__text">Todo lo que necesitas saber sobre la autenticación sin contraseñas.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="desarrollo" data-date="2026-07-02" data-author="Miguel Rivas" data-title="Edge Computing: el nuevo cloud" data-description="Por qué el procesamiento en el borde está reemplazando al cloud centralizado.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/articulos/cloud-computing.jpeg" alt="Centro de datos de computación en la nube" class="article-card__image">
+                    <span class="article-card__category">Desarrollo</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">M</span> Miguel Rivas</span>
+                      <span class="article-card__date">2 Jul 2026</span>
+                      <span class="article-card__reading-time">4 min</span>
+                    </div>
+                    <h3 class="article-card__title">Edge Computing: el nuevo cloud</h3>
+                    <p class="article-card__text">Por qué el procesamiento en el borde está reemplazando al cloud centralizado.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+                <article class="article-card" data-category="gadgets" data-date="2026-07-01" data-author="Laura Chen" data-title="Auriculares ANC: la guía definitiva" data-description="Los mejores cascos con cancelación de ruido activa para cada presupuesto.">
+                  <div class="article-card__image-wrapper">
+                    <img src="../activos/img/reseñas/audifonos-review.jpeg" alt="Auriculares inalámbricos premium en estudio" class="article-card__image">
+                    <span class="article-card__category">Gadgets</span>
+                  </div>
+                  <div class="article-card__body">
+                    <div class="article-card__meta">
+                      <span class="article-card__author"><span class="article-card__avatar">L</span> Laura Chen</span>
+                      <span class="article-card__date">1 Jul 2026</span>
+                      <span class="article-card__reading-time">3 min</span>
+                    </div>
+                    <h3 class="article-card__title">Auriculares ANC: la guía definitiva</h3>
+                    <p class="article-card__text">Los mejores cascos con cancelación de ruido activa para cada presupuesto.</p>
+                  </div>
+                  <div class="article-card__footer"><a href="../articulos/inteligencia-artificial.html" class="btn btn--ghost btn--sm">Leer más</a></div>
+                </article>
+
+              </div>
+            </section>
+
+            <div class="no-results" role="status" aria-live="polite" hidden>
+              <p class="no-results__text">No se encontraron artículos relacionados.</p>
+            </div>
+
+            <nav class="pagination" aria-label="Paginación de artículos">
+              <a href="#" class="pagination__link pagination__link--prev">← <span>Anterior</span></a>
+              <a href="#" class="pagination__link pagination__link--active">1</a>
+              <a href="#" class="pagination__link">2</a>
+              <a href="#" class="pagination__link">3</a>
+              <a href="#" class="pagination__link pagination__link--next"><span>Siguiente</span> →</a>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-footer">
+        <div class="footer__brand">
+          <div class="footer__logo">NEXUS<span>TECH</span></div>
+          <p class="footer__desc">Tu revista digital de tecnología y gaming. Análisis profundos, reseñas honestas y una comunidad apasionada.</p>
+          <div class="footer__social">
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social-link" aria-label="Discord">◆</a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">⌘</a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Navegación</h4>
+          <ul class="footer__list">
+            <li><a href="../index.html" class="footer__link">Inicio</a></li>
+            <li><a href="categorías.html" class="footer__link">Categorías</a></li>
+            <li><a href="resenas.html" class="footer__link">Reseñas</a></li>
+            <li><a href="comunidad.html" class="footer__link">Comunidad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Recursos</h4>
+          <ul class="footer__list">
+            <li><a href="eventos.html" class="footer__link">Eventos</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+            <li><a href="#" class="footer__link">Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contacto</h4>
+          <ul class="footer__list">
+            <li><a href="mailto:hola@nexustech.com" class="footer__link">hola@nexustech.com</a></li>
+            <li><a href="press@nexustech.com" class="footer__link">press@nexustech.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2026 Nexus Tech. Todos los derechos reservados.</span>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Privacidad</a>
+          <a href="#" class="footer__legal-link">Cookies</a>
+          <a href="#" class="footer__legal-link">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
