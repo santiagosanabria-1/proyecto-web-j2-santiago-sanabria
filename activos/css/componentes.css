@@ -731,3 +731,205 @@ details[open] .faq__question::after {
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-lg);
 }
+
+/* ==============================
+   ARTICLE HERO / TABLE OF CONTENTS
+   ============================== */
+
+.article-hero {
+  padding-top: calc(68px + var(--spacing-2xl));
+  padding-bottom: var(--spacing-2xl);
+}
+
+.article-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.article-hero__category {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.article-hero__date {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.article-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem,4vw,2.4rem);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  max-width: 720px;
+}
+
+.article-hero__excerpt {
+  font-size: 1rem;
+  color: var(--color-light-gray);
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.article-hero__author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.article-hero__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-surface-light);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.article-hero__author-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.article-hero__author-role {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.article-hero__banner {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  margin-bottom: var(--spacing-2xl);
+  background: var(--color-surface-light);
+}
+
+.toc {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.toc__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.toc__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.toc__link {
+  font-size: 0.85rem;
+  color: var(--color-light-gray);
+  transition: color var(--transition-fast);
+  text-decoration: none;
+}
+
+.toc__link:hover {
+  color: var(--color-accent);
+}
+
+.article-body {
+  max-width: 700px;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-top: var(--spacing-2xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.article-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.article-body p {
+  font-size: 0.9rem;
+  color: var(--color-light-gray);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+}
+
+.article-body blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+  font-style: italic;
+  color: var(--color-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: var(--spacing-lg);
+  padding-left: var(--spacing-lg);
+}
+
+.article-body li {
+  font-size: 0.9rem;
+  color: var(--color-light-gray);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-xs);
+}
+
+.article-body code {
+  background: var(--color-surface);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.82rem;
+  color: var(--color-accent);
+}
+
+.article-body pre {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  overflow-x: auto;
+}
+
+.article-body pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: var(--color-light-gray);
+}
