@@ -176,3 +176,111 @@
 .header__link--active {
   color: var(--color-accent);
 }
+
+/* ==============================
+   HERO — Cinematic Section
+   ============================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroZoom 8s ease forwards;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.92) 0%,
+    rgba(10, 10, 10, 0.6) 50%,
+    rgba(10, 10, 10, 0.3) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+  padding-top: 68px;
+  width: 100%;
+}
+
+.hero__tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-lg);
+  animation: heroReveal 0.8s ease 0.3s both;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-xl);
+  max-width: 700px;
+  animation: heroReveal 0.8s ease 0.5s both;
+}
+
+.hero__title span {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__description {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: var(--color-light-gray);
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: var(--spacing-2xl);
+  animation: heroReveal 0.8s ease 0.7s both;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  animation: heroReveal 0.8s ease 0.9s both;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: var(--spacing-2xl);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-gray);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: scrollIndicator 2s ease infinite;
+}
