@@ -1,1 +1,178 @@
+/* ==============================
+   LOADING SCREEN
+   ============================== */
 
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  animation: loaderFade 0.6s ease 1.8s forwards;
+  pointer-events: none;
+}
+
+.loader__logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 4px;
+  animation: loaderLogo 0.8s ease both;
+}
+
+.loader__logo span {
+  color: var(--color-accent);
+}
+
+.loader__bar {
+  width: 200px;
+  height: 2px;
+  background: var(--color-border);
+  margin-top: var(--spacing-lg);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loader__bar-inner {
+  height: 100%;
+  background: var(--color-accent);
+  animation: loaderBar 1.2s ease 0.3s both;
+}
+
+/* ==============================
+   READING PROGRESS BAR
+   ============================== */
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary));
+  z-index: 1000;
+  animation: progressBar linear;
+  animation-timeline: scroll();
+  transform-origin: left;
+}
+
+/* ==============================
+   HEADER / NAVIGATION
+   ============================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition-base);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+  height: 68px;
+}
+
+.header__logo {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.header__logo span {
+  color: var(--color-accent);
+}
+
+/* Hamburger Toggle (Checkbox Hack) */
+.nav-toggle {
+  display: none;
+}
+
+.header__toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1002;
+}
+
+.header__toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.header__nav {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  background: rgba(10, 10, 10, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  gap: var(--spacing-xs);
+  transform: translateY(-110%);
+  opacity: 0;
+  transition: all var(--transition-base);
+  border-bottom: 1px solid var(--color-border);
+  pointer-events: none;
+}
+
+.nav-toggle:checked ~ .header__nav {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-toggle:checked ~ .header__toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.nav-toggle:checked ~ .header__toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked ~ .header__toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.header__link {
+  font-size: 0.9rem;
+  color: var(--color-light-gray);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  font-weight: 500;
+}
+
+.header__link:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.header__link--active {
+  color: var(--color-accent);
+}
