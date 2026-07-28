@@ -1,1 +1,263 @@
+/* ==============================
+   GOOGLE FONTS
+   ============================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ==============================
+   CSS CUSTOM PROPERTIES
+   ============================== */
+
+:root {
+  /* Colors */
+  --color-primary: #0A0A0A;
+  --color-secondary: #111111;
+  --color-surface: #1A1A1A;
+  --color-surface-light: #242424;
+  --color-white: #FFFFFF;
+  --color-light-gray: #B0B0B0;
+  --color-gray: #888888;
+  --color-text-muted: #666666;
+  --color-border: #2A2A2A;
+  --color-border-hover: rgba(255,90,31,0.3);
+  --color-accent: #FF5A1F;
+  --color-accent-secondary: #D4AF37;
+
+  /* Typography */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-primary: 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.375rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.5rem;
+  --spacing-2xl: 2rem;
+  --spacing-3xl: 3rem;
+  --spacing-4xl: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+  --shadow-xl: 0 20px 60px rgba(0,0,0,0.6);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* ==============================
+   RESET
+   ============================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--color-primary);
+  color: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ==============================
+   SCROLLBAR
+   ============================== */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray);
+}
+
+/* ==============================
+   KEYFRAMES
+   ============================== */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes heroZoom {
+  0%   { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes heroReveal {
+  0%   { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes loaderFade {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+
+@keyframes loaderLogo {
+  0%   { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes loaderBar {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes progressBar {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+@keyframes scrollIndicator {
+  0%   { opacity: 0; transform: translateY(0); }
+  50%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(8px); }
+}
+
+/* ==============================
+   UTILITY CLASSES
+   ============================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+}
+
+.section {
+  padding: var(--spacing-3xl) 0;
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section__label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-md);
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+}
+
+.section__subtitle {
+  font-size: 0.95rem;
+  color: var(--color-light-gray);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
