@@ -1,63 +1,4 @@
-/* ==============================
-   LOADING SCREEN
-   ============================== */
 
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-primary);
-  animation: loaderFade 0.6s ease 1.8s forwards;
-  pointer-events: none;
-}
-
-.loader__logo {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-white);
-  letter-spacing: 4px;
-  animation: loaderLogo 0.8s ease both;
-}
-
-.loader__logo span {
-  color: var(--color-accent);
-}
-
-.loader__bar {
-  width: 200px;
-  height: 2px;
-  background: var(--color-border);
-  margin-top: var(--spacing-lg);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.loader__bar-inner {
-  height: 100%;
-  background: var(--color-accent);
-  animation: loaderBar 1.2s ease 0.3s both;
-}
-
-/* ==============================
-   READING PROGRESS BAR
-   ============================== */
-
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-secondary));
-  z-index: 1000;
-  animation: progressBar linear;
-  animation-timeline: scroll();
-  transform-origin: left;
-}
 
 /* ==============================
    HEADER / NAVIGATION
@@ -466,6 +407,50 @@
 }
 
 .footer__logo span { color: var(--color-accent); }
+.newsletter{
+  margin-bottom: 2rem;
+
+
+
+}
+.titulo_tra{
+  font-family: 'Courier New', Courier, monospace;
+}
+.newsletter-form{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+}
+.newsletter-form input{
+  font-family: var(--spacing-sm);
+  flex-direction: column;
+  padding: 12px;
+  border: 2px solid ;
+  border-radius: 8px;
+  outline: none;
+  transition: .3s;
+}
+.btn-solo{
+  font-family: var(--font-primary);
+  background-color: var(--color-accent);
+}
+.newsletter-form input::-moz-focus-inner{
+  border-color: var(--color-gray);
+  box-shadow: 0 0 8px var(--color-accent-secondary);
+}
+.newsletter-form button{
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .3s;
+}
+.newsletter-form button:hover{
+  transform: translateY(-2px);
+  opacity: .9;
+}
+
 
 .footer__desc {
   font-size: 0.9rem;
