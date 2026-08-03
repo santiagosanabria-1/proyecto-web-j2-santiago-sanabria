@@ -421,6 +421,7 @@
   flex-direction: column;
   gap: 12px;
   
+  
 }
 .newsletter-form input{
   font-family: var(--spacing-sm);

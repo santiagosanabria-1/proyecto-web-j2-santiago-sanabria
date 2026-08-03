@@ -22,7 +22,7 @@
 <p align="center">
   <b>Revista digital de tecnología y gaming</b><br>
   Análisis profundos, reseñas honestas y una comunidad apasionada por la tecnología.<br>
-  Proyecto académico de maquetación web con HTML5 y CSS3 puros.
+  Proyecto académico de maquetación web con HTML5 y CSS3 puros
 </p>
 
 <br>
